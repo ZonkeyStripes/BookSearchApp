@@ -1,16 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-route-dom";
-import Home from "./components/pages/Home";
-import logo from './logo.svg';
+import {BrowserRouter, HashRouter, Switch, Route} from "react-router-dom";
+import Home from "./components/Home";
+import Nav from "./components/Navbar";
 import './App.css';
 
 function App() {
   return (
-    <Router>
-    <div className="App">
+    <HashRouter>
+    <Nav/>
+    <Switch>
+    <div className="container">
     <Route exact path = "/" component={Home} />
     </div>
-    </Router>
+    </Switch>
+    </HashRouter>
   );
 }
 

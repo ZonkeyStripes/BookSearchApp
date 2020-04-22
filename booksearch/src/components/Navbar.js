@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
       <div className="container">
-        <div className="navbar-brand">(React) Google Book Search</div>
+        <div className="navbar-brand">Google Books</div>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
             <Link to={"/"} className="nav-link">Search</Link>

@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  text-align: center;
+  border: #282c34 solid;
+  margin: 5%;
+}
+
+.ReactImage {
+  position: relative;
+  height: 96px;
+  width: 96px;
+}
+
+.booksearchhead {
+  position: relative;
+}
+
+.booksearch {
+  border: black solid;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 3%;
+  padding-right: 5%;
+}
+
+.results {
+  border: black solid;
+}

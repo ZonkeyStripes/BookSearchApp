@@ -63,4 +63,17 @@
 
 .results {
   border: black solid;
+  margin: 5%;
+}
+
+.bookresults {
+  margin: 5%;
+  border: solid black;
+}
+
+.view-btn, .save-btn {
+  margin: 5px;
+  margin-top: 10px;
+  position: relative;
+  left: 85%;
 }

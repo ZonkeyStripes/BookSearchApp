@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Results from "../components/Results";
+import axios from "axios";
+import $ from "jquery";
+import API from "../bookApi";
+
 
 const Home = () => {
+
+    const [loading, setLoading] = useState(0);
+    const [books, setBooks] = useState([]);
+
+    const searchForBooks = async (e) => {
+        e.preventDefault();
+        setLoading(1);
+        const res = await
+
+        axios.get(`https://www.googleapis.com/books/v1/volumes?q=${$("#search").val()}`);
+
+        console.log("HERE");
+        console.log($("#search").val());
+    
+    setBooks(res.data.items); //Setting books to whatever the API search returns
+    }
+
     return (
         <div className="container">
 
@@ -10,10 +31,11 @@ const Home = () => {
 
         <form action="/action_page.php">
             <label for="book">Book:</label> <br />
-            <input type="text"></input>
+            <input type="text" placeholder="Search Books" id="search"></input>
+            <button className="btn btn-outline-secondary" onClick={searchForBooks}>Search</button>
         </form>
     </div>
-    <Results />
+    <Results books={books}/>
         </div>
         )
 }
